@@ -7,7 +7,12 @@ from tkinter.filedialog import *
 
 
 PATH = os.path.dirname(os.path.abspath(__file__))
+PATH = PATH.strip("MapEditor.py")
+PATH += "src"
+print(PATH)
+
 sys.path.insert(0, PATH)
+
 from SpriteSheet import *
 
 # Engines stuff
@@ -103,7 +108,7 @@ class Editor:
 		self.map.load_map()
 
 		# Loading sprites
-		self.tiles = load_tiles("../Res/tiles.png")
+		self.tiles = load_tiles("../Res/sprites/tiles.png")
 		self.tiles_key = list(self.tiles.keys())
 
 		self.current_slot = 1
