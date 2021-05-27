@@ -1,4 +1,4 @@
-oimport pygame
+import pygame
 import sys
 import os
 
